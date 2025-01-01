@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-rtest
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-rtest
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-rtest
     spec:
       containers:
-      - name: nginx
+      - name: nginx-rtest
         image: nginx:1.21
         ports:
         - containerPort: 80
