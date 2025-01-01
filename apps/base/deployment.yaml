@@ -1,19 +1,22 @@
+# NGINX Deployment Configuration (nginx.yaml)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-rtest
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx-rtest
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx-rtest
+        app: nginx
     spec:
       containers:
-      - name: nginx-rtest
-        image: nginx:1.21
+      - name: nginx
+        image: nginx:latest
         ports:
         - containerPort: 80
