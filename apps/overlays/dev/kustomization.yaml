@@ -5,3 +5,5 @@ namespace: dev
 
 patchesStrategicMerge:
 - patch.yaml
+
+nameSuffix: -dev
