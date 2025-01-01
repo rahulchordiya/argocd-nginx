@@ -5,3 +5,5 @@ namespace: prod
 
 patchesStrategicMerge:
 - patch.yaml
+
+nameSuffix: -prod
